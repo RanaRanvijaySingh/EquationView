@@ -6,14 +6,20 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style type=text/css>/** START:: Reset css **/
-html,body,ul,li {
+    <style type=text/css>
+    /** START:: Reset css **/
+html,body,ul,li,div {
 	padding: 0;
 	margin: 0;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
 	line-height: 20px;
 	color: #212121;
+}
+.noBorder {
+	outline: 0 none;
+	background-color:transparent;
+    border: 0px solid;
 }
 a,a:hover,a:visited{
 	outline: none;
@@ -445,6 +451,11 @@ $(document).on("ready",function(){
         MathJax.Ajax.config.path["mhchem"] = "https://cdnjs.cloudflare.com/ajax/libs/mathjax-mhchem/3.1.0";
         MathJax.Hub.Config(
             {
+                showMathMenu: false,
+                showMathMenuMSIE: false,
+                messageStyle: 'none',
+                preview: 'none',
+                showProcessingMessages: false,
                 tex2jax: {
                     inlineMath: [['$','$'], ['\\(','\\)']]
                 },

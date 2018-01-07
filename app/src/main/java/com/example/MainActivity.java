@@ -21,6 +21,5 @@ public final class MainActivity extends AppCompatActivity {
         mEquationViewChem = findViewById(R.id.equationViewChem);
         mEquationViewMath.setText(strMath);
         mEquationViewChem.setText(strChem);
-        mEquationViewMath.setFocusable(false);
     }
 }
